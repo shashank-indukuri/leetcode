@@ -1,0 +1,7 @@
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        i = bisect_left(nums, target)
+        #index can be used but returns an error if the target is not in the list
+        if i != len(nums) and target == nums[i]:
+            return i
+        return -1
